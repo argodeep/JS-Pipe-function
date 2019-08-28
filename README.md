@@ -49,3 +49,7 @@ console.log(calculateDiffTime(randomDate));
 ## Customization
 
 If you want you can customize it. I have given an example for each function to demonstrate the algorithm.
+
+## Function Request
+
+If want to contribute or want any function to be added please create an issue with details. I will get back to you.
