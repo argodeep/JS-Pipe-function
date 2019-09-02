@@ -1,6 +1,6 @@
 # JS-Pipe-function
 
-Useful JS function. Pass arguments and get results. Written in planin JS. On any framework you can use this.
+Useful JS function. Pass arguments and get results. Written in plain JS. On any framework you can use this.
 
 ## Function Index
 1. _Get time difference from current time_. 
