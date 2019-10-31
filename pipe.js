@@ -1,21 +1,42 @@
 // 1. Get time difference from current time.
 
 function calculateTime(date) {
-  let now = new Date().getTime();
+ let now = new Date().getTime();
   let time = new Date(date).getTime();
   let timeLocale = time - new Date().getTimezoneOffset() * 60 * 1000
   let diff = (now - timeLocale) / 1000;
   if (diff <= 59) {
     let show = diff.toFixed() + ' Seconds Ago';
     return show;
-  } else if (diff > 59 && diff < 3600) {
+  } else if (diff > 59 && diff < 120) {
+    let show = (diff / 60).toFixed() + ' Minute Ago';
+    return show;
+  } else if (diff > 119 && diff < 3600) {
     let show = (diff / 60).toFixed() + ' Minutes Ago';
     return show;
-  } else if (diff > 3600 && diff < 3600 * 24 - 1) {
+  } else if (diff > 3600 && diff < 3600 * 2) {
+    let show = (diff / 60 / 60).toFixed() + ' Hour Ago';
+    return show;
+  } else if (diff > 3600 * 2 - 1 && diff < 3600 * 24 - 1) {
     let show = (diff / 60 / 60).toFixed() + ' Hours Ago';
     return show;
-  } else if (diff >= 3600 * 24) {
+  } else if (diff > 3600 * 24 && diff < 3600 * 2) {
+    let show = (diff / 60 / 60 / 24).toFixed() + ' Day Ago';
+    return show;
+  } else if (diff > 3600 * 24 - 1 && diff < 3600 * 24 * 30 - 1) {
     let show = (diff / 60 / 60 / 24).toFixed() + ' Days Ago';
+    return show;
+  } else if (diff > 3600 * 24 * 30 && diff < 3600 * 24 * 30 * 2) {
+    let show = (diff / 60 / 60 / 24 / 30).toFixed() + ' Month Ago';
+    return show;
+  } else if (diff > 3600 * 24 * 30 * 2 - 1 && diff < 3600 * 24 * 30 * 12 - 1) {
+    let show = (diff / 60 / 60 / 24 / 30).toFixed() + ' Months Ago';
+    return show;
+  } else if (diff > 3600 * 24 * 30 * 12 && diff < 3600 * 24 * 30 * 12 * 2) {
+    let show = (diff / 60 / 60 / 24 / 30 / 12).toFixed() + ' Year Ago';
+    return show;
+  } else if (diff > 3600 * 24 * 30 * 12 * 2 - 1) {
+    let show = (diff / 60 / 60 / 24 / 30 / 12).toFixed() + ' Years Ago';
     return show;
   }
 }
