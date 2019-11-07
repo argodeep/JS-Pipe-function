@@ -20,12 +20,12 @@ function calculateTime(date) {
   } else if (diff > 3600 * 2 - 1 && diff < 3600 * 24 - 1) {
     let show = (diff / 60 / 60).toFixed() + ' Hours Ago';
     return show;
-  } else if (diff > 3600 * 24 && diff < 3600 * 2) {
+  } else if (diff > 3600 * 24 && diff < 3600 * 24 * 2) {
     let show = (diff / 60 / 60 / 24).toFixed() + ' Day Ago';
     return show;
-  } else if (diff > 3600 * 24 - 1 && diff < 3600 * 24 * 30 - 1) {
+  } else if (diff > 3600 * 24 * 2 - 1 && diff < 3600 * 24 * 30 - 1) {
     let show = (diff / 60 / 60 / 24).toFixed() + ' Days Ago';
-    return show;
+     return show;
   } else if (diff > 3600 * 24 * 30 && diff < 3600 * 24 * 30 * 2) {
     let show = (diff / 60 / 60 / 24 / 30).toFixed() + ' Month Ago';
     return show;
@@ -38,7 +38,8 @@ function calculateTime(date) {
   } else if (diff > 3600 * 24 * 30 * 12 * 2 - 1) {
     let show = (diff / 60 / 60 / 24 / 30 / 12).toFixed() + ' Years Ago';
     return show;
-  }
+  } 
+ return null
 }
 
 
