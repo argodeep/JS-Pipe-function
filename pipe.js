@@ -64,6 +64,19 @@ console.log(getSum(someValues));
 
 // 3. Get file name & extension from s3 bucket url
 
+getFileNameExt = (url) => {
+  const urlSplit = url.split('?X-Amz-Content', 1).toString();
+  const name = urlSplit.split('/')[urlSplit.split('/').length - 1].toLowerCase();
+  const ext = name.split('.')[name.split('.').length - 1].toLowerCase();
+  return {
+    name: name,
+    ext: ext
+  }
+}
+
+
+console.log(getFileNameExt('https://example.s3.ap-south-1.amazonaws.com/docker.pdf?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=Assdshjbsap-south-1%2Fs3%2Faws4_request&X-Amz-Date=20191213T072236Z&X-Amz-SignedHeaders=host&X-Amz-Expires=7200&X-Amz-Signature=sdsjbdjsbdmns564as5ad'));
+
 {
 name:"docker.pdf",
 ext:"pdf"
