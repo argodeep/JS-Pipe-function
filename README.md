@@ -5,6 +5,7 @@ Useful JS function. Pass arguments and get results. Written in plain JS. On any 
 ## Function Index
 1. _Get time difference from current time_. 
 2. _Get sum of total from an array_.
+3. _Get file name and extension from s3 bucket asset url_.
 
 ## Getting Started
 
