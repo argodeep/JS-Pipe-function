@@ -60,4 +60,11 @@ let getSum = (givenArray) => {
 }
 
 let someValues = ['a', 4, 5, 'h', 5];
-console.log(getSum(someValues))
+console.log(getSum(someValues));
+
+// 3. Get file name & extension from s3 bucket url
+
+{
+name:"docker.pdf",
+ext:"pdf"
+}
