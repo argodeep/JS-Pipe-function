@@ -81,3 +81,26 @@ console.log(getFileNameExt('https://example.s3.ap-south-1.amazonaws.com/docker.p
 name:"docker.pdf",
 ext:"pdf"
 }
+
+// get timer text in hours:min:sec format if duration is given in mins.
+
+function getTimerValue(duration) {
+    if (duration < 1) {
+      return {
+        hour: 0,
+        min: 1,
+        sec: Math.ceil(duration * 60)
+      }
+    } else if (duration => 1 && duration < 60) {
+      return {
+        hour: 0,
+        min: Math.ceil(duration),
+        sec: 0
+      }
+    }
+    return {
+      hour: Math.ceil(duration / 60) - 1,
+      min: duration - (Math.ceil(duration / 60) - 1) * 60,
+      sec: 0
+    }
+  }
