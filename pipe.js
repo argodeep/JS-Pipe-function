@@ -82,7 +82,7 @@ name:"docker.pdf",
 ext:"pdf"
 }
 
-// get timer text in hours:min:sec format if duration is given in mins.
+// 4. get timer text in hours:min:sec format if duration is given in mins.
 
 function getTimerValue(duration) {
     if (duration < 1) {
