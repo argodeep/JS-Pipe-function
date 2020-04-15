@@ -52,7 +52,7 @@ let getSum = (givenArray) => {
   let total = 0;
   for(var k = 0; k < givenArray.length; k++) {                  
     if(!isNaN(givenArray[k])){
-      total += Number(someValues[k]);
+      total += Number(givenArray[k]);
     }
    
   }
